@@ -259,6 +259,13 @@ defmodule Sparrow.APNS.Notification do
     do: add_header(notification, "apns-topic", value)
 
   @doc """
+  Sets the `apns-push-type` header.
+  """
+  @spec add_apns_push_type(__MODULE__.t(), String.t()) :: __MODULE__.t()
+  def add_apns_push_type(notification, value),
+    do: add_header(notification, "apns-push-type", value)
+    
+  @doc """
   Sets the `apns-collapse-id` header.
   """
   @spec add_apns_collapse_id(__MODULE__.t(), String.t()) :: __MODULE__.t()
